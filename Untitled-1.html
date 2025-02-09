@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        .gif {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes {
+            background-color: red;
+            color: white;
+        }
+        .no {
+            background-color: white;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGo1bjN3enkxdmVvZWZyeGZmcnQxbWU4em52Y2M0aWt6dTc1c3RkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cYMbzPlOSfANiAblWc/giphy.gif" alt="Cute Valentine Gif" class="gif">
+        <div class="buttons">
+            <button class="yes" onclick="goToLovePage()">Yes</button>
+            <button class="no" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.querySelector('.no');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        function goToLovePage() {
+            window.location.href = "love.html";
+        }
+    </script>
+</body>
+</html>
